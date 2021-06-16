@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{parskip}
+\usepackage{graphicx}
+
+% Margins
+\usepackage[top=2.0 cm, left=3cm, right=3cm, bottom=4.0cm]{geometry}
+% Colour table cells
+\usepackage[table]{xcolor}
+
+% Get larger line spacing in table
+\newcommand{\tablespace}{\\[1.25mm]}
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand\tstrut{\rule{0pt}{2.0ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
+
+%%%%%%%%%%%%%%%%%
+%     Title     %
+%%%%%%%%%%%%%%%%%
+\title{Ensayo 02 - Aprendizaje Reforzado}
+\author{Martínez López Andrés}
+\date{17 de junio del 2021}
+
+\begin{document}
+\maketitle
+
+
+\section*{Aprendizaje Reforzado}
+El Aprendizaje Reforzado o Aprendizaje por Refuerzo se inspira en la psicología conductista, cuyo objetivo es determinar qué acciones debe escoger un agente de software en un entorno dado con el fin de maximizar alguna noción de recompensa a través de un conjunto de algoritmos que permite a las maquinas hacer que su comportamiento sea cada vez más autónomo y acorde a lo deseado.
+
+Los refuerzos pueden ser componentes o sugerencias de la utilidad actual a maximizar y a diferencia de otro tipo de aprendizaje como el supervisado y no supervisado, al reforzado no se le presentan pares entrada-salida; la tiene que obtener experiencia util acerca de los estados, acciones, transiciones y recompensas de manera activa para poder actuar de manera óptima y la evaluación del sistema ocurre de manera continua con el aprendizaje. Así en el aprendizaje por refuerzo "no tenemos una etiqueta de salida, por lo que no es de tipo supervisado y si bien estos algoritmos aprenden por sí mismos, tampoco son de tipo no supervisado, en donde se intenta clasificar grupos teniendo en cuenta alguna distancia entre muestras"\cite{AprendeML}.
+
+Una de las principales causas por las que surge el enfoque de aprendizaje reforzado es la gran cantidad de variables que se relacionan entre sí para poder tomar una decisión en específico y que a su vez involucran escenarios más grandes en donde una maquina con aprendizaje supervisado o no supervisado, difícilmente pudiera abordar este tipo de problemática.
+
+El aprendizaje por refuerzo intentará hacer aprender a la máquina mediante su propia experiencia, basándose en un esquema de “premios y castigos”, un proceso interactivo de prueba y error en un entorno en donde hay que tomar acciones y que está afectado por múltiples variables que cambian con el tiempo. "Por eso, con el Aprendizaje Reforzado una máquina puede tomar decisiones aunque no almacene un conocimiento a priori del entorno o de las variables que se están dando, y realizar de manera satisfactoria cuestiones abstractas más avanzadas"\cite{Acciona}.
+
+\section*{Componentes para el Aprendizaje Reforzado }
+En los modelos supervisado y no supervisado, lo que se busca es minimizar el costo total que produce la toma de decisiones en donde a su vez, se busca reducir el error que la maquina o el algoritmo arroje, sin embargo, para el aprendizaje reforzado lo que se busca es maximizar la recompensa a pesar de los errores o la poca exactitud que se tenga.
+
+Para ello es necesario principalmente dos componentes, el agente y el ambiente; el agente será nuestro modelo que queremos aprenda a tomar decisiones basándose en su experiencia y en el entrenamiento que este tenga; el ambiente será el entorno con el que interactúe nuestro agente, y contendrá limitaciones y reglas preestablecidas que ayuden a mejorar con cada uno de los intentos o actos que realice la máquina para aprender de una manera más eficiente.
+
+Así mismo, existen tres nexos con los cuales se retroalimentara entre el agente y el ambiente, el primero de ellos es la acción que realice la máquina para poder tomar una decisión en un momento determinado; el segundo es el estado, en el cual nos referimos a los indicadores, variables, factores u objetos que componen en ese momento al ambiente; por ultimo tenemos a la recompensa o el castigo, así a raíz de cada acción tomada por el agente, se dará un reforzamiento positivo o negativo a través de un premio o penalización que haga saber al agente si los actos realizados fueron correctos o conforme a lo previsto.
+
+De esta forma, en un primer momento, el agente recibe un estado inicial y toma una acción con lo cual influye e interviene en el ambiente, en la siguiente iteración el ambiente devolverá al agente el nuevo estado y la recompensa obtenida. Si la recompensa es positiva estaremos reforzando ese comportamiento para el futuro. En cambio, si la recompensa es negativa lo estaremos penalizando, para que ante la misma situación el agente actúe de manera distinta, de esta forma con el paso del tiempo y el número de acciones realizadas se entrenará al agente para poder llevar a cabo una toma de decisiones más abstractas y con un resultado óptimo.
+
+\section*{Interacción Humano-Robot}
+Ante el avance de la Inteligencia Artificial y Machine Learning, las actividades de los humanos han pasado poco a poco a ser parte de los robots, automatizando los procesos y siendo más eficientes optimizando el costo, tiempo, esfuerzo y recursos para poder llevar a cabo tareas cada vez más complejas.
+
+Aunque existe un gran número de entornos en donde no es necesario que exista la intervención del ser humano para que una maquina pueda efectuar sus tareas sin complicaciones, en especial dentro del aprendizaje por refuerzo, suele ser imprescindible la intervención del hombre, si bien en un inicio el robot, la máquina, el programa o el algoritmo intenta realizar la tarea por si sola, cuando se ve presionado ante una situación difícil de solucionar, pide la asistencia humana y gracias al aprendizaje reforzado, aprende lo que hace el humano y acumula esa experiencia para las próximas veces que se encuentre en esa situación.
+
+\section*{Conclusión}
+A lo largo de este ensayo se han mencionado las partes fundamentales para poder llevar a cabo de buena manera el aprendizaje reforzado y todo lo que implica para poder tener algún efecto en la máquina que queremos empiece a realizar una tarea de forma procedural y repetitiva con el fin de que con el paso del tiempo la realice mejor y con un coste menor.
+
+Si bien, existen métodos o maquinas especializadas que nos ayuden a poder realizar ciertas tareas. Con el aprendizaje reforzado creamos un conocimiento el cual puede ser traspasado o mejorado con el paso del tiempo añadiendo nuevos objetivos o elementos en el ambiente, de esta manera la eficiencia de la maquina es mucho mejor y sin la necesidad de descartar resultados no deseados, ya que estos sirven a su vez como reforzamientos negativos el cual ayudan a mejorar el algoritmo del aprendizaje reforzado que se esté implementando.
+
+En conclusión, el aprendizaje reforzado es la manera más cercana en que los humanos aprendemos a realizar las tareas, ya que es a base de prueba y error, tiempo y entrenamiento con lo cual se mejoran las habilidades y las capacidades para poder desarrollar tareas más complejas y que involucren más factores en el ambiente y en el agente mismo, de esta manera podemos estar casi seguros de que aquel sistema que implemente el aprendizaje reforzado, tendrá un resultado optimo y estable ante las situaciones a las que se afrente.
+
+\begin{thebibliography}{0}
+  \bibitem{AprendeML} Aprende Machine Learning. (2020) Aprendizaje por Refuerzo. Consultado de https://www.aprendemachinelearning.com/aprendizaje-por-refuerzo/ el 16 de junio del 2021.
+
+  \bibitem{Acciona} I'MNOVATION. (S-R) Aprendizaje reforzado: cuando las máquinas aprenden solas. Consultado de https://www.imnovation-hub.com/es/transformacion-digital/aprendizaje-reforzado-cuando-las-maquinas-aprenden-solas/ el 16 de junio del 2021.
+  
+  \bibitem{INAOE} Eduardo Morales. (S-R) Aprendizaje por Refuerzo. Consultado de https://ccc.inaoep.mx/~emorales/Cursos/Aprendizaje2/Acetatos/refuerzo.pdf el 16 de junio del 2021.
+  
+\end{thebibliography}
+
+\end{document}
